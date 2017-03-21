@@ -58,6 +58,7 @@ PhpMyAdmin starts up in port 8080.
 #### Mysql Password
 - user : root
 - password : root
+
 If you want to change password, edit docker-compose.yml  
 
 #### Licence
