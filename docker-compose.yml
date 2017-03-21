@@ -1,0 +1,47 @@
+version: "3.0"
+services:
+
+  nginx:
+    build: "./container/nginx"
+    ports:
+      - "80:80"
+    volumes:
+      - "./public:/var/www/html/public"
+    links:
+      - "php-fpm"
+    container_name: "lnmp_nginx"
+
+  php-fpm:
+    build: "./container/php-fpm"
+    volumes:
+      - "./public:/var/www/html/public"
+    links:
+      - "mysql"
+    environment:
+      DATABASE_HOST: 'mysql'
+      DATABASE_USER: 'root'
+      DATABASE_PASSWORD: 'root'
+    container_name: "lnmp_php-fpm"
+  
+  mysql:
+    image: "mysql"
+    volumes:
+      - "./container/mysql:/var/lib/mysql"
+    environment:
+      - "MYSQL_ROOT_PASSWORD=root"
+    container_name: "lnmp_mysql"
+
+  phpmyadmin:
+    image: "phpmyadmin/phpmyadmin"
+    environment:
+      - "PMA_ARBITRARY=1"
+      - "PMA_HOST=mysql"
+      - "PMA_USER=root"
+      - "PMA_PASSWORD=root"
+    links:
+      - "mysql"
+    ports:
+       - "8080:80"
+    volumes:
+       - "/sessions"
+    container_name: "lnmp_phpmyadmin"
