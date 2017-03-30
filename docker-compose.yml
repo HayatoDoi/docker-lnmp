@@ -21,6 +21,7 @@ services:
       DATABASE_HOST: 'mysql'
       DATABASE_USER: 'root'
       DATABASE_PASSWORD: 'root' # Mysql Password
+      PATH: '$PATH:/root/.composer/vendor/bin'
     container_name: "lnmp_php-fpm"
   
   mysql:
