@@ -31,9 +31,9 @@ Attention!! This Docker Compose is for development!!
 
 #### Demo
 PHP-fpm on Nginx starts up in port 80.  
-![https://raw.githubusercontent.com/HayatoDoi/docker-lnmp/master/img/localhost:80.png](https://raw.githubusercontent.com/HayatoDoi/docker-lnmp/master/img/localhost:80.png)  
+![https://raw.githubusercontent.com/HayatoDoi/docker-lnmp/master/img/localhost80.png](https://raw.githubusercontent.com/HayatoDoi/docker-lnmp/master/img/localhost80.png)  
 PhpMyAdmin starts up in port 8080.  
-![https://raw.githubusercontent.com/HayatoDoi/docker-lnmp/master/img/localhost:8080.png](https://raw.githubusercontent.com/HayatoDoi/docker-lnmp/master/img/localhost:8080.png)  
+![https://raw.githubusercontent.com/HayatoDoi/docker-lnmp/master/img/localhost8080.png](https://raw.githubusercontent.com/HayatoDoi/docker-lnmp/master/img/localhost8080.png)  
 
 #### Requirement
 - Docker version 17.03.0-ce
